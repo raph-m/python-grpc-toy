@@ -1,1 +1,10 @@
-.venvs/
+/.venvs/
+/build/
+/protos/
+/python_protos.egg-info/
+/runtime/build/
+/runtime/protos/
+/runtime/python_protos.egg-info/
+/stubs/build/
+/stubs/protos/
+/stubs/python_protos_stubs.egg-info/

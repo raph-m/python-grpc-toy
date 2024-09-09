@@ -1,6 +1,8 @@
 syntax= "proto3";
 package rank;
 
+import "protos/model/entityType.proto";
+
 message RecommendationContext {
   optional string user_id = 1;
 }
@@ -8,6 +10,7 @@ message RecommendationContext {
 message Entity {
   optional string entity_id = 1;
   optional string reasons = 2;
+  optional model.EntityType type = 3;
 }
 
 message PredictionMetadata {

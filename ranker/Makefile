@@ -1,3 +1,5 @@
-activate-venv:
-	./activate-venv.sh
+setup-venv:
+	bash setup-venv.sh
 
+clean-env:
+	rm -r .venvs
