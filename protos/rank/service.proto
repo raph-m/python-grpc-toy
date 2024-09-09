@@ -1,0 +1,8 @@
+syntax = "proto3";
+package rank;
+
+import "protos/rank/routeDefinition.proto";
+
+service Ranker {
+    rpc RankEntities(rank.RankRequest) returns (rank.RankResponse){}
+}

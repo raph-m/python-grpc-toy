@@ -1,0 +1,38 @@
+syntax= "proto3";
+package rank;
+
+message RecommendationContext {
+  optional string user_id = 1;
+}
+
+message Entity {
+  optional string entity_id = 1;
+  optional string reasons = 2;
+}
+
+message PredictionMetadata {
+  optional string feature_log = 1;
+  optional string model_id = 2;
+}
+
+message Prediction {
+  optional string entity_id = 1;
+  optional double score = 2;
+  optional PredictionMetadata metadata = 3;
+}
+
+message RankOptions {
+  optional bool enable_starspace = 1;
+  optional bool enable_diversification = 2;
+}
+
+message RankRequest {
+  optional RecommendationContext rec_context = 1;
+  repeated Entity entities = 2;
+  optional RankOptions options = 3;
+}
+
+message RankResponse {
+  repeated Prediction predictions = 1;
+  optional string user_feature_log = 2;
+}
